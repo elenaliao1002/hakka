@@ -9,7 +9,7 @@ import time
 
 def main():
     cwd = os.getcwd()
-    st.image("banner.png", use_column_width=True)
+    st.image(f"{cwd}/banner.png", use_column_width=True)
     st.title("Food Image Recognition")  # <- change this align to center
 
     # st.subheader("Food Image Recognition")
