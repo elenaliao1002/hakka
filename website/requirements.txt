@@ -2,8 +2,10 @@ Pillow==9.5.0
 streamlit==1.21.0
 # YOLOv5 requirements
 # Usage: pip install -r requirements.txt
---find-links https://download.pytorch.org/whl/cpu/torch_stable.html
-# Base ------------------------------------------------------------------------
+-f https://download.pytorch.org/whl/torch_stable.html 
+torch==1.4.0+cpu 
+-f https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.5.0+cpu# Base ------------------------------------------------------------------------
 gitpython>=3.1.30
 matplotlib>=3.3
 numpy>=1.18.5
