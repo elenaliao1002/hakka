@@ -60,10 +60,10 @@ def make_inference(SOURCE_PATH):
     my_bar = st.progress(0)
     with st.spinner(progress_text):
         subprocess.run(
-            ['python3', f'{pwd}/food_model_v1/yolov5/detect.py', '--source',
-             f'{pwd}/food_model_v1/user_uploads', '--weights',
-             f'{pwd}/food_model_v1/yolov5/runs/train/exp2/weights/best.pt', '--project',
-             f'{pwd}', '--name', 'inferenced_imgs'])
+            ['python3', f'{cwd}/food_model_v1/yolov5/detect.py', '--source',
+             f'{cwd}/food_model_v1/user_uploads', '--weights',
+             f'{cwd}/food_model_v1/yolov5/runs/train/exp2/weights/best.pt',
+             '--project', f'{cwd}', '--name', 'inferenced_imgs'])
         for percent_complete in range(100):
             time.sleep(0.1)
             my_bar.progress(percent_complete + 1)
