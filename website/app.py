@@ -28,9 +28,14 @@ def main():
             col1.write("Original Image :camera:")
             col1.image(image_file, use_column_width=True,
                        caption="Uploaded Image")
+            # save image to github repo
             with open(os.path.join(f'{cwd}/user_uploads', image_file.name), "wb") as f:
                 f.write(image_file.getbuffer())
                 st.success("Saved image_file")
+
+            # with open(os.path.join(f'{cwd}/user_uploads', image_file.name), "wb") as f:
+            #     f.write(image_file.getbuffer())
+            #     st.success("Saved image_file")
 
             classified = make_inference(image_file)
 
