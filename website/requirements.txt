@@ -13,7 +13,6 @@ onnxruntime==1.14.1
 onnxsim==0.4.24
 opencv_python==4.7.0.72
 openvino==2022.3.0
-paddle==1.0.2
 pafy==0.5.5
 pandas==1.5.3
 Pillow==9.5.0
