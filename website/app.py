@@ -9,7 +9,7 @@ import time
 
 def main():
     cwd = os.getcwd()
-    st.image(f"{cwd}/banner.png", use_column_width=True)
+    st.image("../website/banner.png", use_column_width=True)
     st.title("Food Image Recognition")  # <- change this align to center
 
     # st.subheader("Food Image Recognition")
@@ -28,14 +28,9 @@ def main():
             col1.write("Original Image :camera:")
             col1.image(image_file, use_column_width=True,
                        caption="Uploaded Image")
-            # save image to github repo
             with open(os.path.join(f'{cwd}/user_uploads', image_file.name), "wb") as f:
                 f.write(image_file.getbuffer())
                 st.success("Saved image_file")
-
-            # with open(os.path.join(f'{cwd}/user_uploads', image_file.name), "wb") as f:
-            #     f.write(image_file.getbuffer())
-            #     st.success("Saved image_file")
 
             classified = make_inference(image_file)
 
@@ -54,21 +49,21 @@ def main():
 
 def make_inference(SOURCE_PATH):
     cwd = os.getcwd()
-    # get the previous working directory
     pwd = os.path.abspath(os.path.join(cwd, os.pardir))
+
     progress_text = "Inference in progress. Please wait."
     my_bar = st.progress(0)
     with st.spinner(progress_text):
         subprocess.run(
-            ['python3', f'{cwd}/food_model_v1/yolov5/detect.py', '--source',
-             f'{cwd}/food_model_v1/user_uploads', '--weights',
-             f'{cwd}/food_model_v1/yolov5/runs/train/exp2/weights/best.pt',
-             '--project', f'{cwd}', '--name', 'inferenced_imgs'])
+            ['python3', f'{pwd}/food_model_v1/yolov5/segment/predict.py',
+             '--source', f'{cwd}/user_uploads', '--weights',
+             f'{pwd}/food_model_v1/yolov5/runs/train/exp2/weights/best1.pt',
+             '--project', f'{cwd}', '--name', 'inferenced_imgs',
+             '--hide-conf', '--conf', '0.25'])
         for percent_complete in range(100):
             time.sleep(0.1)
             my_bar.progress(percent_complete + 1)
-    infer_img = os.path.join(f'{pwd}/inferenced_imgs/', SOURCE_PATH.name)
-
+    infer_img = os.path.join(f'{cwd}/inferenced_imgs/', SOURCE_PATH.name)
     return infer_img
 
 
