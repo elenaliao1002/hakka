@@ -1,8 +1,8 @@
 --prefer-binary
 
-torchvision>=0.8.1+cpu
+torchvision>=0.8.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 torch>=1.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
- 
+torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 
 #torch==1.8.1+cpu
 #torchvision==0.9.1+cpu
