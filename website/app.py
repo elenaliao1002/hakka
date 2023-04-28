@@ -61,7 +61,7 @@ def make_inference(SOURCE_PATH):
     my_bar = st.progress(0)
     with st.spinner(progress_text):
         subprocess.run(
-            ['python3', f'{pwd}/models/yolov5/segment/predict.py', '--source',
+            ['python3', f'{cwd}/models/yolov5/segment/predict.py', '--source',
              f'{pwd}/website/user_uploads/{SOURCE_PATH.name}', '--weights',
              f'{pwd}/models/yolov5/runs/train/exp2/weights/best.pt',
              '--project', f'{cwd}', '--name', 'inferenced_imgs', '--save-txt',
