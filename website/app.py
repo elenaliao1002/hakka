@@ -9,7 +9,7 @@ import time
 
 def main():
     cwd = os.getcwd()
-    st.image("../website/banner.png", use_column_width=True)
+    st.image(f"{cwd}/banner.png", use_column_width=True)
     st.title("Food Image Recognition")  # <- change this align to center
 
     # st.subheader("Food Image Recognition")
@@ -55,9 +55,9 @@ def make_inference(SOURCE_PATH):
     my_bar = st.progress(0)
     with st.spinner(progress_text):
         subprocess.run(
-            ['python3', f'{pwd}/food_model_v1/yolov5/segment/predict.py',
+            ['python3', f'{pwd}/models/yolov5/segment/predict.py',
              '--source', f'{cwd}/user_uploads', '--weights',
-             f'{pwd}/food_model_v1/yolov5/runs/train/exp2/weights/best1.pt',
+             f'{pwd}/models/yolov5/runs/train/exp2/weights/best1.pt',
              '--project', f'{cwd}', '--name', 'inferenced_imgs',
              '--hide-conf', '--conf', '0.25'])
         for percent_complete in range(100):
