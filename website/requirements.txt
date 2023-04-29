@@ -6,7 +6,7 @@
 
 #torch>=1.8.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 #torchvision>=0.9.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
-
+ultralytics
 # YOLOv5 requirements
 # Usage: pip install -r requirements.txt
 
