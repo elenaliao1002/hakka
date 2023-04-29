@@ -15,20 +15,20 @@ matplotlib
 numpy
 opencv-python-headless
 Pillow
-PyYAML
-requests
-scipy  # Google Colab version
+#PyYAML
+#requests
+#scipy  # Google Colab version
 
 tqdm
-protobuf  # https://github.com/ultralytics/yolov5/issues/8012
+#protobuf  # https://github.com/ultralytics/yolov5/issues/8012
 
 # Logging -------------------------------------
-tensorboard
+#tensorboard
 # wandb
 
 # Plotting ------------------------------------
 pandas
-seaborn
+#seaborn
 
 # Export --------------------------------------
 # coremltools>=4.1  # CoreML export
@@ -40,11 +40,11 @@ seaborn
 # openvino-dev  # OpenVINO export
 
 # Extras --------------------------------------
-ipython  # interactive notebook
-psutil  # system utilization
-thop  # FLOPs computation
+#ipython  # interactive notebook
+#psutil  # system utilization
+#thop  # FLOPs computation
 streamlit
-st_btn_select
+#st_btn_select
 # albumentations>=1.0.3
 # pycocotools>=2.0  # COCO mAP
 # roboflow
