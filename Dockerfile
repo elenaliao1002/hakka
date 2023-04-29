@@ -8,7 +8,8 @@ RUN apt-get update && \
     libsm6 \
     libxext6 \
     git
+    
 RUN git clone https://github.com/elenaliao1002/hakka App
 WORKDIR /App
 RUN pip install -r requirements.txt
-CMD [ "streamlit", "run", "app.py" ]
+CMD [ "streamlit", "run", "website/app.py" ]
