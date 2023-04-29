@@ -1,4 +1,4 @@
---prefer-binary
+#--prefer-binary
 
 #torchvision>=0.8.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 #torch>=1.13.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
@@ -11,15 +11,15 @@ ultralytics
 # Usage: pip install -r requirements.txt
 
 # Base ----------------------------------------
-matplotlib
-numpy
-opencv-python-headless
-Pillow
+#matplotlib
+#numpy
+#opencv-python-headless
+#Pillow
 #PyYAML
 #requests
 #scipy  # Google Colab version
 
-tqdm
+#tqdm
 #protobuf  # https://github.com/ultralytics/yolov5/issues/8012
 
 # Logging -------------------------------------
@@ -27,7 +27,7 @@ tqdm
 # wandb
 
 # Plotting ------------------------------------
-pandas
+#pandas
 #seaborn
 
 # Export --------------------------------------
@@ -48,4 +48,4 @@ streamlit
 # albumentations>=1.0.3
 # pycocotools>=2.0  # COCO mAP
 # roboflow
-wget
+#wget
