@@ -63,7 +63,7 @@ def make_inference(SOURCE_PATH):
         subprocess.run(
             ['python3', f'{cwd}/models/yolov5/segment/predict.py', '--source',
              f'{pwd}/website/user_uploads/{SOURCE_PATH.name}', '--weights',
-             f'{pwd}/models/yolov5/runs/train/exp2/weights/best.pt',
+             f'{pwd}/models/yolov5/runs/train/exp2/weights/best2.pt',
              '--project', f'{cwd}', '--name', 'inferenced_imgs', '--save-txt',
              '--hide-conf', '--conf', '0.25'])
         for percent_complete in range(100):
